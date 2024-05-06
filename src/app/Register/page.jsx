@@ -4,6 +4,8 @@ import Link from "next/link";
 import googlelogo from "../../../public/google-logo.png"
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+// import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+// import { jwtDecode } from "jwt-decode";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -49,6 +51,18 @@ export default function Register() {
   return (
     <>
       <ToastContainer draggable />
+      {/* <GoogleOAuthProvider clientId="800292796336-o35at56rl6kag22nglo59ol7ab88f2ud.apps.googleusercontent.com">
+        <GoogleLogin
+          onSuccess={credentialResponse => {
+            const details = jwtDecode(credentialResponse.credential);
+            console.log(details);
+            console.log(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
+      </GoogleOAuthProvider> */}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Image
